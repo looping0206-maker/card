@@ -23,12 +23,12 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
             max-width: 420px; 
             width: 100%; 
-            padding: 30px 25px; 
+            padding: 35px 25px; 
             text-align: center; 
             border-top: 6px solid #1a365d;
         }
         .logo { 
-            font-size: 15px; 
+            font-size: 16px; 
             font-weight: 800; 
             color: #1a365d; 
             letter-spacing: 4px; 
@@ -36,7 +36,7 @@
             margin-bottom: 10px; 
         }
         h1 { 
-            font-size: 24px; 
+            font-size: 26px; 
             margin: 0 0 5px 0; 
             color: #111; 
             font-weight: 700; 
@@ -45,64 +45,72 @@
             font-size: 14px;
             color: #4a5568;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
         hr {
             border: 0;
             border-top: 1px solid #edf2f7;
-            margin: 15px 0;
+            margin: 20px 0;
         }
         .experience-section {
             text-align: left;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
         .exp-item {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
         .exp-title {
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 700;
             color: #1a365d;
-            margin-bottom: 2px;
+            margin-bottom: 3px;
         }
         .exp-desc {
-            font-size: 13px;
+            font-size: 13.5px;
             color: #4a5568;
             line-height: 1.4;
         }
-        .qr-section { 
+        .contact-section { 
             background: #f8fafc; 
             padding: 20px; 
             border-radius: 16px; 
             border: 1px solid #edf2f7; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: left;
         }
-        .qr-image { 
-            width: 180px; 
-            height: 180px; 
-            object-fit: contain; 
-            border-radius: 12px;
-        }
-        .contact-info { 
-            font-size: 13px; 
-            color: #4a5568; 
-            margin-top: 15px; 
-            line-height: 1.6;
+        .contact-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 12px;
             text-align: center;
         }
-        .contact-info strong {
-            color: #1a365d;
+        .contact-info { 
+            font-size: 14px; 
+            color: #4a5568; 
+            line-height: 1.8;
+        }
+        .contact-info strong { color: #1a365d; }
+        .signal-btn {
+            display: block;
+            text-align: center;
+            background-color: #1a365d;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 10px;
         }
         .disclaimer {
             font-size: 11px;
             color: #a0aec0;
-            margin-top: 20px;
+            margin-top: 25px;
             font-style: italic;
             line-height: 1.4;
+            text-align: center;
         }
     </style>
 </head>
@@ -110,7 +118,6 @@
 
 <div class="card-container">
     <div class="logo">Looping</div>
-    
     <h1>Eunyoung Choi</h1>
     <div class="subtitle">Inbound Regulatory & Compliance Advisor</div>
     
@@ -135,13 +142,13 @@
         </div>
     </div>
     
-    <div class="qr-section">
-        <img src="signal_qr.png" alt="Signal QR" class="qr-image">
-        
+    <div class="contact-section">
+        <div class="contact-title">💬 Contact Information</div>
         <div class="contact-info">
-            <strong>Signal ID:</strong> Looping.55<br>
-            <strong>Email:</strong> looping0206@gmail.com
+            <strong>Email:</strong> looping0206@gmail.com<br>
+            <strong>Signal ID:</strong> Looping.55
         </div>
+        <a href="https://signal.me/#eu/Looping.55" class="signal-btn" target="_blank">Connect via Signal</a>
     </div>
 
     <div class="disclaimer">
