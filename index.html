@@ -1,160 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eunyoung Choi - Looping</title>
-    <style>
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
-            background-color: #f4f6f9; 
-            color: #333; 
-            margin: 0;
-            padding: 20px;
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-            min-height: 100vh;
-            box-sizing: border-box;
-        }
-        .card-container { 
-            background: #fff; 
-            border-radius: 20px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
-            max-width: 420px; 
-            width: 100%; 
-            padding: 35px 25px; 
-            text-align: center; 
-            border-top: 6px solid #1a365d;
-        }
-        .logo { 
-            font-size: 16px; 
-            font-weight: 800; 
-            color: #1a365d; 
-            letter-spacing: 4px; 
-            text-transform: uppercase; 
-            margin-bottom: 10px; 
-        }
-        h1 { 
-            font-size: 26px; 
-            margin: 0 0 5px 0; 
-            color: #111; 
-            font-weight: 700; 
-        }
-        .subtitle {
-            font-size: 14px;
-            color: #4a5568;
-            font-weight: 600;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        hr {
-            border: 0;
-            border-top: 1px solid #edf2f7;
-            margin: 20px 0;
-        }
-        .experience-section {
-            text-align: left;
-            margin-bottom: 30px;
-        }
-        .exp-item {
-            margin-bottom: 18px;
-        }
-        .exp-title {
-            font-size: 15px;
-            font-weight: 700;
-            color: #1a365d;
-            margin-bottom: 3px;
-        }
-        .exp-desc {
-            font-size: 13.5px;
-            color: #4a5568;
-            line-height: 1.4;
-        }
-        .contact-section { 
-            background: #f8fafc; 
-            padding: 20px; 
-            border-radius: 16px; 
-            border: 1px solid #edf2f7; 
-            text-align: left;
-        }
-        .contact-title {
-            font-size: 14px;
-            font-weight: 700;
-            color: #2d3748;
-            margin-bottom: 12px;
-            text-align: center;
-        }
-        .contact-info { 
-            font-size: 14px; 
-            color: #4a5568; 
-            line-height: 1.8;
-        }
-        .contact-info strong { color: #1a365d; }
-        .signal-btn {
-            display: block;
-            text-align: center;
-            background-color: #1a365d;
-            color: #fff;
-            text-decoration: none;
-            padding: 10px;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 14px;
-            margin-top: 10px;
-        }
-        .disclaimer {
-            font-size: 11px;
-            color: #a0aec0;
-            margin-top: 25px;
-            font-style: italic;
-            line-height: 1.4;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eunyoung Choi — 최은영</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f7f4ef;
+      --ink: #1a1814;
+      --warm: #8c7355;
+      --accent: #b5956a;
+      --muted: #9e9589;
+      --line: #e0d9ce;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 48px 40px 40px;
+      position: relative;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .corner {
+      position: absolute;
+      width: 18px; height: 18px;
+      border-color: var(--accent);
+      border-style: solid;
+    }
+    .corner.tl { top: 10px; left: 10px; border-width: 1.5px 0 0 1.5px; }
+    .corner.tr { top: 10px; right: 10px; border-width: 1.5px 1.5px 0 0; }
+    .corner.bl { bottom: 10px; left: 10px; border-width: 0 0 1.5px 1.5px; }
+    .corner.br { bottom: 10px; right: 10px; border-width: 0 1.5px 1.5px 0; }
+
+    .name-block {
+      margin-bottom: 28px;
+    }
+
+    .name-en {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 26px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+
+    .name-kr {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--muted);
+      margin-top: 4px;
+      letter-spacing: 0.08em;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--line);
+      margin: 24px 0;
+    }
+
+    .bio {
+      font-size: 13.5px;
+      font-weight: 300;
+      color: #4a4540;
+      line-height: 1.85;
+      border-left: 2px solid var(--accent);
+      padding-left: 14px;
+      margin-bottom: 28px;
+    }
+
+    .contact-block {
+      margin-bottom: 28px;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: var(--ink);
+    }
+
+    .contact-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      width: 52px;
+      flex-shrink: 0;
+    }
+
+    .contact-value {
+      font-weight: 400;
+      color: #3a3530;
+    }
+
+    .divider { height: 1px; background: var(--line); margin: 24px 0; }
+
+    .signal-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .signal-qr {
+      width: 90px;
+      height: 90px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    .signal-info {
+      flex: 1;
+    }
+
+    .signal-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .signal-id {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .signal-hint {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+  </style>
 </head>
 <body>
+  <div class="card">
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
 
-<div class="card-container">
-    <div class="logo">Looping</div>
-    <h1>Eunyoung Choi</h1>
-    <div class="subtitle">Inbound Regulatory & Compliance Advisor</div>
-    
-    <hr>
-    
-    <div class="experience-section">
-        <div class="exp-item">
-            <div class="exp-title">State Bar of California</div>
-            <div class="exp-desc">Member since Dec 2002 (Inactive)</div>
-        </div>
-        <div class="exp-item">
-            <div class="exp-title">Hana Asset Management (UBS Hana)</div>
-            <div class="exp-desc">Legal Counsel (2012 ~ 2024) / Corporate Governance & FSS Regulatory Matters</div>
-        </div>
-        <div class="exp-item">
-            <div class="exp-title">Woori Asset Management (Woori Credit Suisse)</div>
-            <div class="exp-desc">Legal Team Head (2008 ~ 2011) / Capital Market Act & Cross-Border Compliance</div>
-        </div>
-        <div class="exp-item">
-            <div class="exp-title">Shin & Kim (법무법인 세종)</div>
-            <div class="exp-desc">Foreign Legal Consultant (2003 ~ 2008) / Financial & Corporate Transactions</div>
-        </div>
-    </div>
-    
-    <div class="contact-section">
-        <div class="contact-title">💬 Contact Information</div>
-        <div class="contact-info">
-            <strong>Email:</strong> looping0206@gmail.com<br>
-            <strong>Signal ID:</strong> Looping.55
-        </div>
-        <a href="https://signal.me/#eu/Looping.55" class="signal-btn" target="_blank">Connect via Signal</a>
+    <div class="name-block">
+      <div class="name-en">Eunyoung Choi</div>
+      <div class="name-kr">최은영</div>
     </div>
 
-    <div class="disclaimer">
-        *Providing business coordination & regulatory navigation for inbound entities. Formal legal opinions (Legal Advice) are not provided.
+    <div class="bio">
+      Regulatory &amp; market entry consultant bridging Korean and foreign businesses.<br>
+      California-licensed attorney (inactive) with expertise in compliance strategy and cross-border business navigation.<br>
+      Specializing in regulatory frameworks and market access advisory.
     </div>
-</div>
 
+    <div class="divider"></div>
+
+    <div class="contact-block">
+      <div class="contact-row">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">looping0206@gmail.com</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="signal-section">
+      <img class="signal-qr" src="signal_qr.png" alt="Signal QR Code" />
+      <div class="signal-info">
+        <div class="signal-label">Signal</div>
+        <div class="signal-id">Looping.55</div>
+        <div class="signal-hint">Scan QR or search ID<br>on Signal to connect</div>
+      </div>
+    </div>
+
+    <div class="footer">looping0206-maker.github.io/card</div>
+  </div>
 </body>
 </html>
