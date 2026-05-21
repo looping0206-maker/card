@@ -10,38 +10,71 @@
             background-color: #f4f6f9; 
             color: #333; 
             margin: 0;
+            padding: 20px;
             display: flex; 
             justify-content: center; 
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
         .card-container { 
             background: #fff; 
             border-radius: 20px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
-            max-width: 380px; 
-            width: 85%; 
-            padding: 35px 25px; 
+            max-width: 420px; 
+            width: 100%; 
+            padding: 30px 25px; 
             text-align: center; 
+            border-top: 6px solid #1a365d;
         }
         .logo { 
-            font-size: 16px; 
+            font-size: 15px; 
             font-weight: 800; 
             color: #1a365d; 
             letter-spacing: 4px; 
             text-transform: uppercase; 
-            margin-bottom: 15px; 
+            margin-bottom: 10px; 
         }
         h1 { 
             font-size: 24px; 
-            margin: 0 0 30px 0; 
+            margin: 0 0 5px 0; 
             color: #111; 
             font-weight: 700; 
-            letter-spacing: -0.5px;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #4a5568;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #edf2f7;
+            margin: 15px 0;
+        }
+        .experience-section {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        .exp-item {
+            margin-bottom: 15px;
+        }
+        .exp-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 2px;
+        }
+        .exp-desc {
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.4;
         }
         .qr-section { 
             background: #f8fafc; 
-            padding: 25px; 
+            padding: 20px; 
             border-radius: 16px; 
             border: 1px solid #edf2f7; 
             display: flex;
@@ -49,20 +82,27 @@
             align-items: center;
         }
         .qr-image { 
-            width: 200px; 
-            height: 200px; 
+            width: 180px; 
+            height: 180px; 
             object-fit: contain; 
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
         }
         .contact-info { 
-            font-size: 14px; 
+            font-size: 13px; 
             color: #4a5568; 
-            margin-top: 20px; 
-            line-height: 1.5;
+            margin-top: 15px; 
+            line-height: 1.6;
+            text-align: center;
         }
         .contact-info strong {
             color: #1a365d;
+        }
+        .disclaimer {
+            font-size: 11px;
+            color: #a0aec0;
+            margin-top: 20px;
+            font-style: italic;
+            line-height: 1.4;
         }
     </style>
 </head>
@@ -72,6 +112,28 @@
     <div class="logo">Looping</div>
     
     <h1>Eunyoung Choi</h1>
+    <div class="subtitle">Inbound Regulatory & Compliance Advisor</div>
+    
+    <hr>
+    
+    <div class="experience-section">
+        <div class="exp-item">
+            <div class="exp-title">State Bar of California</div>
+            <div class="exp-desc">Member since Dec 2002 (Inactive)</div>
+        </div>
+        <div class="exp-item">
+            <div class="exp-title">Hana Asset Management (UBS Hana)</div>
+            <div class="exp-desc">Legal Counsel (2012 ~ 2024) / Corporate Governance & FSS Regulatory Matters</div>
+        </div>
+        <div class="exp-item">
+            <div class="exp-title">Woori Asset Management (Woori Credit Suisse)</div>
+            <div class="exp-desc">Legal Team Head (2008 ~ 2011) / Capital Market Act & Cross-Border Compliance</div>
+        </div>
+        <div class="exp-item">
+            <div class="exp-title">Shin & Kim (법무법인 세종)</div>
+            <div class="exp-desc">Foreign Legal Consultant (2003 ~ 2008) / Financial & Corporate Transactions</div>
+        </div>
+    </div>
     
     <div class="qr-section">
         <img src="signal_qr.png" alt="Signal QR" class="qr-image">
@@ -80,6 +142,10 @@
             <strong>Signal ID:</strong> Looping.55<br>
             <strong>Email:</strong> looping0206@gmail.com
         </div>
+    </div>
+
+    <div class="disclaimer">
+        *Providing business coordination & regulatory navigation for inbound entities. Formal legal opinions (Legal Advice) are not provided.
     </div>
 </div>
 
